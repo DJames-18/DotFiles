@@ -1,11 +1,15 @@
 -- ~/.config/nvim-new/lua/lsp.lua
 vim.lsp.enable({
-  "bashls",
   "gopls",
   "lua_ls",
-  "texlab",
   "ts_ls",
   "rust-analyzer",
-  "helm_ls",
+  "clangd",
+  "jdtls",
+  "python-language-server",
+  "marksman",
+  "zls"
+
+
 })
 vim.diagnostic.config({ virtual_text = true })

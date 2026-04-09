@@ -1,4 +1,4 @@
-# TODO List
+# TOD List
 ## 1. Install needed LSPs
     - *cpp*
     - *java*

@@ -33,3 +33,11 @@ vim.api.nvim_create_autocmd("FileType", {
         end, { buffer = true, silent = true })
 end
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function ()
+        vim.api.set_hl(0, "DiffText", {bg = "#FFFFFF"})
+        
+    end
+})
