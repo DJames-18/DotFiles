@@ -5,5 +5,3 @@ require("keymaps")
 require("autocmds")
 --require("statusline")
 require("lsp")
-
-

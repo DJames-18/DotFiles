@@ -12,6 +12,45 @@ vim.pack.add({
 
 require('mason').setup()
 
+-- Nvim-jdtls
+vim.pack.add({
+    { src = "https://github.com/mfussenegger/nvim-jdtls" },
+})
+
+-- Nvim-lspconfig
+vim.pack.add({
+    { src = 'https://github.com/neovim/nvim-lspconfig' },
+})
+
+-- Mason-lspconfig
+vim.pack.add({
+    { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
+})
+
+require('mason-lspconfig').setup({
+    automatic_enable = false,
+})
+-- Mason-tool-installer
+vim.pack.add({
+    { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
+})
+
+require('mason-tool-installer').setup({
+	ensure_installed = {
+		'lua_ls',
+		'gopls',
+		'ts_ls',
+		'jsonls',
+		'stylua',
+		'prettier',
+        "rust-analyzer",
+        "clangd",
+        "marksman",
+        "pyright",
+        "zls",
+	},
+})
+
 -- Blink.cmp
 vim.pack.add({
     { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },

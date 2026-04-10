@@ -6,8 +6,8 @@ vim.lsp.enable({
   "rust-analyzer",
   "clangd",
   "jdtls",
-  "python-language-server",
   "marksman",
+  "python-language-server",
   "zls"
 
 
