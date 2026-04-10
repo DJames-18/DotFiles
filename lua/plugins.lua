@@ -1,3 +1,9 @@
+-- Snacks
+vim.pack.add({
+    { src = "https://github.com/folke/snacks.nvim" },
+})
+
+require('snacks').setup({})
 -- Github symbols for statusline
 vim.pack.add({
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
@@ -158,19 +164,20 @@ require('miniharp').setup({ show_on_autoload = true })
 
 --Lualine
 vim.pack.add({
-    {'https://github.com/nvim-mini/mini.icons',
-    src = 'https://github.com/nvim-lualine/lualine.nvim' },
+    { src = 'https://github.com/nvim-mini/mini.icons',
+      src ='https://github.com/nvim-lualine/lualine.nvim' },
 })
 
 require('lualine').setup()
 
 -- render-markdown
 vim.pack.add({
-    'https://github.com/nvim-treesitter/nvim-treesitter',
-    'https://github.com/nvim-mini/mini.nvim',            -- if you use the mini.nvim suite
-    'https://github.com/nvim-mini/mini.icons',        -- if you use standalone mini plugins
-    -- 'https://github.com/nvim-tree/nvim-web-devicons', -- if you prefer nvim-web-devicons
-    'https://github.com/MeanderingProgrammer/render-markdown.nvim',
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter',
+      src = 'https://github.com/nvim-mini/mini.nvim',            -- if you use the mini.nvim suite
+      src = 'https://github.com/nvim-mini/mini.icons',        -- if you use standalone mini plugins
+      -- 'https://github.com/nvim-tree/nvim-web-devicons', -- if you prefer nvim-web-devicons
+      src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim'
+  }
 })
 require('render-markdown').setup({}) -- only mandatory if you want to set custom options
 
@@ -179,9 +186,42 @@ vim.pack.add({
     { src = "https://github.com/folke/trouble.nvim" },
 })
 
-require('trouble').setup({
-    keymap = {
-        ["<leader>xx"] = "<cmd>Trouble diagnostics toggle<CR>"
-},
+require('trouble').setup({})
+--Nui
+vim.pack.add({
+    {  src = "https://github.com/MunifTanjim/nui.nvim" },
 })
 
+-- Noice
+vim.pack.add({
+    {
+      src = "https://github.com/rcarriga/nvim-notify",
+      src = "https://github.com/folke/noice.nvim" },
+})
+require("noice").setup({
+  lsp = {
+    -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+    override = {
+      ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+      ["vim.lsp.util.stylize_markdown"] = true,
+      ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+    },
+  },
+  -- you can enable a preset for easier configuration
+  presets = {
+    bottom_search = true, -- use a classic bottom cmdline for search
+    command_palette = true, -- position the cmdline and popupmenu together
+    long_message_to_split = true, -- long messages will be sent to a split
+    inc_rename = false, -- enables an input dialog for inc-rename.nvim
+    lsp_doc_border = false, -- add a border to hover docs and signature help
+  },
+})
+
+-- Smear-cursor
+vim.pack.add({
+    { src = "https://github.com/sphamba/smear-cursor.nvim" },
+})
+
+require('smear_cursor').setup({
+    cursor_color = "#d3cdc3",
+})

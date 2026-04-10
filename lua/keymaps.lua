@@ -6,6 +6,7 @@ vim.g.mapleader = " "
 
 keymap("n", "<space>", "<Nop>")
 
+keymap({"i", "n", "v"}, "<C-c>", "<esc>")
 keymap("n", "j", function()
     return tonumber(vim.api.nvim_get_vvar("count")) > 0 and "j" or "gj"
 end, { expr = true, silent = true }) -- Move down, but use 'gj' if no count is given
@@ -65,3 +66,6 @@ keymap("n", "<C-p>", require("miniharp").prev)
 
 -- Fzflua --
 keymap("n", "<leader>ff", '<cmd>FzfLua files<CR>')
+
+-- Trouble --
+keymap("n", "<leader>tx", "<cmd>Trouble diagnostics toggle<CR>")
