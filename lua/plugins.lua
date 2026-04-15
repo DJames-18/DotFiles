@@ -3,7 +3,8 @@ vim.pack.add({
     { src = "https://github.com/folke/snacks.nvim" },
 })
 
-require('snacks').setup({})
+require('snacks').setup({
+})
 -- Github symbols for statusline
 vim.pack.add({
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
@@ -35,6 +36,9 @@ vim.pack.add({
 
 require('mason-lspconfig').setup({
     automatic_enable = false,
+    exclude = {
+        'jdtls'
+    }
 })
 -- Mason-tool-installer
 vim.pack.add({
@@ -116,6 +120,11 @@ vim.pack.add({
 })
 
 require('techbase').setup({})
+
+vim.pack.add({
+    { src = "https://github.com/rose-pine/neovim" },
+})
+require('rose-pine').setup({})
 
 -- Fuzzy Picker
 vim.pack.add({
@@ -225,3 +234,50 @@ vim.pack.add({
 require('smear_cursor').setup({
     cursor_color = "#d3cdc3",
 })
+
+-- StickyNotes
+vim.pack.add({
+    { src = "https://github.com/Sou1lah/StickyNotes.nvim" },
+})
+
+-- TimeBomb
+
+vim.pack.add({
+	{ src = "https://github.com/Lachignol/time-bomb.nvim" }
+})
+
+
+require("time-bomb").setup({
+    enable_default_keymaps = false,
+
+  position = {
+	layout = "top-right",            -- Options: bottom-right, top-left, bottom-left, top-right
+	margin = { x = 2, y = 1 },       -- Margin for the popup relative to the chosen layout corner (x: horizontal, y: vertical) (must be >= 0 )
+  },
+
+  pomodoro_cycles = {
+		{ title = "Work",        time = "25", style = "fire" }, -- Time in minute*
+		{ title = "Short-Break", time = "5",  style = "cyberpunk" },
+		{ title = "Work",        time = "25", style = "fire" },
+		{ title = "Short-Break", time = "5",  style = "cyberpunk" },
+		{ title = "Work",        time = "25", style = "fire" },
+		{ title = "Long-Break",  time = "15", style = "cyberpunk" },
+	},
+  -- *Time must be upper than 1 min and less than 1440 min (1 day)
+  timer_color = "white",           -- lime, blue, black, gray, silver, white, fuchsia
+  enable_notification = true,    -- System notifications
+})
+
+-- Hardtime
+vim.pack.add({
+    { src = "https://github.com/m4xshen/hardtime.nvim" },
+})
+
+require("hardtime").setup()
+
+-- Doing
+vim.pack.add({
+    { src = "https://github.com/Hashino/doing.nvim" },
+})
+
+require("doing").setup()

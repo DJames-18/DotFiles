@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "StickyNotes.nvim": {
+      "rev": "6d7b0527002360f6c98f8e2cd8f31545b3405444",
+      "src": "https://github.com/Sou1lah/StickyNotes.nvim"
+    },
     "bamboo.nvim": {
       "rev": "1309bc88bffcf1bedc3e84e7fa9004de93da774a",
       "src": "https://github.com/ribru17/bamboo.nvim"
@@ -9,6 +13,10 @@
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
     },
+    "doing.nvim": {
+      "rev": "83a0b110d9b6655172695238e066e2e513e78aaf",
+      "src": "https://github.com/Hashino/doing.nvim"
+    },
     "fzf-lua": {
       "rev": "4deeecf611c0beba6455e6cf06e2c051a6169dd4",
       "src": "https://github.com/ibhagwan/fzf-lua"
@@ -16,6 +24,10 @@
     "gitsigns.nvim": {
       "rev": "8d82c240f190fc33723d48c308ccc1ed8baad69d",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
+    "hardtime.nvim": {
+      "rev": "b4e431934af1fe224a3a801f632c008278cb7628",
+      "src": "https://github.com/m4xshen/hardtime.nvim"
     },
     "lualine.nvim": {
       "rev": "f5d2a8570f8b736ddb9bb4be504355bcd6e15ec8",
@@ -44,6 +56,10 @@
     "miniharp.nvim": {
       "rev": "29c50dd622e98e2fc5e12f71fba29e3fc34f1425",
       "src": "https://github.com/vieitesss/miniharp.nvim"
+    },
+    "neovim": {
+      "rev": "9504524e5ed0e326534698f637f9d038ba4cd0ee",
+      "src": "https://github.com/rose-pine/neovim"
     },
     "noice.nvim": {
       "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
@@ -84,6 +100,10 @@
     "techbase.nvim": {
       "rev": "fc4e039e370043d7ae7203c9a1dbbda76f683740",
       "src": "https://github.com/mcauley-penney/techbase.nvim"
+    },
+    "time-bomb.nvim": {
+      "rev": "2f0b71b74171d1b1a5bc0778287ebf7eabbbf750",
+      "src": "https://github.com/Lachignol/time-bomb.nvim"
     },
     "trouble.nvim": {
       "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",

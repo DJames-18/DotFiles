@@ -32,4 +32,4 @@ vim.g.netrw_liststyle = 1 -- Use the long listing view
 vim.g.netrw_sort_by = "size" -- Sort files by size
 
 -- Colorscheme -
-vim.cmd.colorscheme("techbase")
+vim.cmd.colorscheme("rose-pine")

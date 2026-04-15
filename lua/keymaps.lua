@@ -69,3 +69,19 @@ keymap("n", "<leader>ff", '<cmd>FzfLua files<CR>')
 
 -- Trouble --
 keymap("n", "<leader>tx", "<cmd>Trouble diagnostics toggle<CR>")
+
+-- TimeBomb --
+keymap("n", "<leader>tbc", function()
+    local custom_time = vim.fn.input("Enter timer length: ")
+    vim.cmd("TimeBomb timer " .. custom_time)
+end)
+keymap("n", "<leader>tbs", "<cmd>TimeBomb pomodoro<CR>")
+keymap("n", "<leader>tbe", "<cmd>TimeBomb stop<CR>")
+keymap("n", "<leader>tbp", "<cmd>TimeBomb pause<CR>")
+keymap("n", "<leader>tbn", "<cmd>TimeBomb next<CR>")
+keymap("n", "<leader>tbb", "<cmd>TimeBomb prev<CR>")
+
+-- Doing --
+keymap("n", "<leader>da", "<cmd>Do add<CR>")
+keymap("n", "<leader>dn", "<cmd>Do done<CR>")
+keymap("n", "<leader>de", "<cmd>Do edit<CR>")
